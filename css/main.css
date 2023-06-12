@@ -406,7 +406,7 @@ body {
     width: 40%;
   }
   .hero {
-    background-image: url("./img/girl.jpg");
+    background-image: url("../img/girl.jpg");
     height: 30vh;
   }
   .footer__main {
