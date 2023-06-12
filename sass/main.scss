@@ -1,0 +1,557 @@
+@use 'reset';
+
+.burger-btn {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    height: 5rem;
+    width: 4rem;
+    background: transparent;
+    border:none;
+    cursor:pointer;
+    z-index: 100;
+    
+}
+
+.logo{
+    position: absolute;
+    top: 1rem;
+    height: 3rem;
+    left: 10%;
+    text-decoration: none;
+
+    &__text {
+        font-size: 3rem;
+        color:black;
+    }
+}
+
+.nav-desktop{
+    position: fixed;
+    display: none;
+    top: 0;
+    height: 4.6rem;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+    
+    &__items {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 15%;
+    }
+    
+    
+    &__item {
+        color:black;
+        text-decoration: none;
+        font-size: 1.6rem;
+        padding: 1.35rem 1rem;
+    }
+    
+    &__item:hover {
+        color:white;
+        background-color: black;
+        cursor:pointer;
+    }
+}
+
+.nav-mobile{
+    position: fixed;
+    display: flex;
+    height: 4.6rem;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    
+    &__items {
+        position: fixed;
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 100%;
+        transition: left .5s;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+    }
+    
+    
+    &__item {
+        text-decoration: none;
+        color:black;
+        padding: 2.4rem;
+        margin: 1rem;
+        font-size: 3.6rem;
+    }
+    
+    &__item:hover {
+        color:white;
+        background-color: black;
+        cursor:pointer;
+    }
+}
+
+.active {
+    transition: left .5s;
+    left: 0;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    background-image: url('/img/jungleS.jpg');
+    height: 50vh;
+    top: 4.6rem;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    
+    &__text {
+        position: absolute;
+        color:white;
+        z-index: 10;
+        
+        & h1 {
+            font-size: 3.6rem;
+            font-weight:lighter;
+        }
+
+        & p {
+            font-size: 4.8rem;
+            font-weight: bold;
+        }
+    }
+
+    &__shadow {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+}
+
+.aboutus {
+    position: relative;
+    margin-top: 20vh;
+
+    &__section-title {
+        text-transform: uppercase;
+        font-size: 3.6rem;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text {
+        margin-top: 3rem;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+    }
+
+    &__info {
+        margin-top: 1.5rem;
+        font-size: 1.6rem;
+    }
+}
+
+.hero {
+    display: flex;
+    height: 20vh;
+    position: relative;
+    background-image: url('/img/girlS.jpg');
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+
+    &__text {
+        font-size: 2.4rem;
+        color:white;
+        padding: 1.6rem;
+        border: 1px solid white;
+        z-index: 1;
+    }
+
+    &__shadow {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+}
+
+.offer {
+    position: relative;
+    margin-top: 10vh;
+
+    &__section-title {
+        text-transform: uppercase;
+        font-size: 3.6rem;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        text-align: center;
+
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin:2rem;
+        border: 2px solid transparent;
+        border-radius: 1rem;
+        box-shadow: 1px 0 8px rgba(0, 0, 0, 0.5);
+        transition: transform .5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }   
+
+    &__name {
+        margin: 1rem 0;
+        font-size: 3.6rem;
+    }
+
+    &__price {
+        margin: 1rem 0;
+        font-size: 4.8rem;
+        font-weight: bold;
+    }
+    &__options {
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        font-size: 2.4rem;
+    }
+    
+    &__option-includes {
+        text-align: left;
+        margin: 0.5rem 0;
+        
+        &::before {
+            position: absolute;
+            display: block;
+            transform:translateX(-2.4rem);
+            content:'';
+            height: 2.4rem;
+            width: 2.4rem;
+            background-image: url(/img/check.svg);
+    
+        }
+    }
+
+    &__option-unincluded {
+        text-align: left;
+        margin: 0.5rem 0;
+        color: grey;
+
+        &::before {
+            position: absolute;
+            display: block;
+            transform:translateX(-2.4rem);
+            content:'';
+            height: 2.4rem;
+            width: 2.4rem;
+            background-image: url(/img/minus.svg);
+    
+        }
+    }
+
+    &__btn {
+        margin: 1rem 0;
+        height: 3.6rem;
+        border: 2px solid transparent;
+        border-radius: 1rem;
+        background-color: #fff;
+        box-shadow: 1px 0 8px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: background-color .5s;
+
+        &:hover {
+            background-color: rgb(72, 209, 113);
+        }
+    }
+}
+
+.footer {
+    position: relative;
+
+    &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(201, 201, 201);
+    }
+    
+    &__brand {
+        margin: auto 20%;
+    }
+
+    &-logo{
+        text-decoration: none;
+    
+        &__text {
+            font-size: 3rem;
+            color:black;
+        }
+    }
+    &__h3 {
+        margin: 1rem 0;
+        font-weight: bold;
+        font-size: 2.4em;
+    }
+    &__p {
+        font-size: 1.6em;
+        transition: font-weight .5s;
+
+        &:hover {
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    &__bottom {
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.6rem;
+        background-color: rgb(201, 201, 201);
+    }
+}
+
+
+// CONTAKT
+
+
+.contact {
+    position: relative;
+    margin: 10rem 5%;
+
+    &__h1 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 4.8rem;
+        margin: 2rem auto;
+    }
+
+    &__form,
+    &__form-top {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.4rem;
+    }
+    &__btn {
+        align-self: flex-end;
+        padding: .5em;
+        margin: 2rem 0;
+        width: 100%;
+        max-width: 30rem;
+        color: white;
+        border: 2px solid black;
+        transition: background-color .5s, color .5s;
+        background-color: black;
+        font-size: 2.4rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+            color:black
+        }
+    }
+
+    &__input {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__textarena {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+    }
+
+}
+
+.location {
+    margin: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__h2 {
+        align-content: center;
+        font-size: 3.6rem;
+        margin-bottom: 5rem;
+        font-weight: normal;
+    }
+
+    &__map-small {
+
+        border: 4px solid black;
+
+    }
+
+    &__map-normal {
+        border: 4px solid black;
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .header {
+        background-image: url('/img/jungle.jpg');
+
+        &__text {
+            & h1 {
+                font-size: 2.4rem;
+            }
+
+            & p {
+                font-size: 3.6rem;
+            }
+        }
+    }
+
+    .aboutus {
+    
+        &__box {
+            display: flex;
+            padding: 5rem 0;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    
+        &__img {
+            width: 40%;
+        }
+
+        &__text {
+            width: 40%;
+        }
+    }
+
+    .hero {
+        background-image: url('/img/girl.jpg');
+        height: 30vh;
+    }
+
+    .footer {
+        &__main {
+        flex-direction: row;
+        }
+        
+        &-logo{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 50%;
+        
+            &__text {
+                font-size: 3rem;
+                color:black;
+            }
+        }
+
+        &__box {
+            margin: 3rem auto;
+        }
+
+        &__h3 {
+            font-weight: bold;
+            font-size: 1.6em;
+        }
+        &__p {
+            margin-top: 1rem;
+            font-size: 1.2em;
+        }
+        &__bottom {
+            font-size: 1rem;
+        }
+    }
+
+    .location{
+
+        &__map-small {
+            display: none;
+        }
+
+        &__map-normal {
+            display: block;
+        }
+    }
+    
+
+}
+
+
+
+
+
+@media (min-width: 992px){
+    
+    .offer {
+        &__cards {
+            display: flex;
+            justify-content:flex-start;
+            flex-direction: row;
+        }
+
+        &__card {
+            width: 30%;
+        }
+
+        &__name {
+            font-size: 2.4rem;
+        }
+    
+        &__price {
+            font-size: 3.6rem;
+        }
+        &__options {
+            font-size: 1.6rem;
+        }
+    }
+
+    .nav-desktop {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+}

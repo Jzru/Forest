@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Forest Group - Kontakt</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        <nav class="nav-mobile">
+            <a href="#" class="logo">
+                <img src="/img/iconmonstr-tree-10.svg" class="logo__icon">
+                <span class="logo__text">Forest</span>
+            </a>
+
+        <button class="burger-btn">
+                <img src="/img/iconmonstr-menu-lined.svg">
+        </button>
+
+        <div class="nav-mobile__items">
+            <a class="nav-mobile__item" href="index.html">Home</a>
+            <a class="nav-mobile__item" href="index.html#aboutus">O nas</a>
+            <a class="nav-mobile__item" href="index.html#offer">Oferta</a>
+            <a class="nav-mobile__item" href="#">Kontakt</a>
+        </div>
+
+        </nav>
+
+        <nav class="nav-desktop">
+            <a href="#" class="logo">
+                <img src="/img/iconmonstr-tree-10.svg" class="logo__icon">
+                <span class="logo__text">Forest</span>
+            </a>
+
+            <div class="nav-desktop__items">
+                <a class="nav-desktop__item" href="index.html">Home</a>
+                <a class="nav-desktop__item" href="index.html#aboutus">O nas</a>
+                <a class="nav-desktop__item" href="index.html#offer">Oferta</a>
+                <a class="nav-desktop__item" href="#">Kontakt</a>
+            </div>
+
+        </nav>
+
+        <main>
+            <section class="contact">
+
+                <h1 class="contact__h1">Kontakt</h1>
+
+                <form class="contact__form">
+
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__label"><img src="/img/iconmonstr-user-5.svg">
+                            Imię i nazwisko:</label>
+                        <input type="text" class="contact__input" id="name">
+
+                        <label for="email" class="contact__label"><img src="/img/at-sign.svg">
+                            Adres e-mail:</label>
+                        <input type="text" id="email" class="contact__input">
+                    </div>
+
+                    <label for="msg" class="contact__label"><img src="/img/iconmonstr-email-1.svg">
+                        Wiadomość:</label>
+                    <textarea id="msg" class="contact__textarea"></textarea>
+                    
+                    <button 
+                    class="contact__btn">Wyślij</button>
+                </form>
+
+            </section>
+            <section class="location">
+
+                <h2 class="location__h2">Mapa</h2>
+
+                <div class="location__map-small">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d76827.65121868455!2d18.712282!3d53.0048279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471cca5300000001%3A0x8aefb9ac27c4bb1!2sRuiny%20zamku%20w%20Z%C5%82otorii!5e0!3m2!1spl!2spl!4v1686220650808!5m2!1spl!2spl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+                <div class="location__map-normal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d47020.57907702697!2d18.712282024029562!3d53.00482785244544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471cca5300000001%3A0x8aefb9ac27c4bb1!2sRuiny%20zamku%20w%20Z%C5%82otorii!5e0!3m2!1spl!2spl!4v1686219901383!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="footer">
+            <div class="footer__main">
+    
+                <div class="footer__brand">
+                    
+                    <a href="#" class="footer-logo">
+                        <img src="/img/iconmonstr-tree-10.svg" class="footer-logo__icon">
+                        <span class="footer-logo__text">Forest</span>
+                    </a>
+                </div>
+            
+                <div class="footer__box">
+                    <h3 class="footer__h3">O nas</h3>
+                    <p class="footer__p">Historia</p>
+                    <p class="footer__p">Parki</p>
+                    <p class="footer__p">Opinie</p>
+                </div>
+                <div class="footer__box">
+                    <h3 class="footer__h3">Nasza firma</h3>
+                    <p class="footer__p">Praca</p>
+                    <p class="footer__p">Kadry</p>
+                    <p class="footer__p">Zarząd</p>
+                </div>
+                <div class="footer__box">
+                    <h3 class="footer__h3">Dokumenty</h3>
+                    <p class="footer__p">Wnioski</p>
+                    <p class="footer__p">Rezerwacje</p>
+                </div>
+            </div>
+            <hr>
+            <p class="footer__bottom"> &copy; <span class="footer__year"></span>
+                Forest Group Company Ltd. 
+            </p>
+        </footer>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
