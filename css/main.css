@@ -109,7 +109,7 @@ body {
 .header {
   display: flex;
   position: relative;
-  background-image: url("/img/jungleS.jpg");
+  background-image: url("./img/jungleS.jpg");
   height: 50vh;
   top: 4.6rem;
   background-position: center;
@@ -174,7 +174,7 @@ body {
   display: flex;
   height: 20vh;
   position: relative;
-  background-image: url("/img/girlS.jpg");
+  background-image: url("./img/girlS.jpg");
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -251,7 +251,7 @@ body {
   content: "";
   height: 2.4rem;
   width: 2.4rem;
-  background-image: url(/img/check.svg);
+  background-image: url(./img/check.svg);
 }
 .offer__option-unincluded {
   text-align: left;
@@ -265,7 +265,7 @@ body {
   content: "";
   height: 2.4rem;
   width: 2.4rem;
-  background-image: url(/img/minus.svg);
+  background-image: url(./img/minus.svg);
 }
 .offer__btn {
   margin: 1rem 0;
@@ -385,7 +385,7 @@ body {
 
 @media (min-width: 768px) {
   .header {
-    background-image: url("/img/jungle.jpg");
+    background-image: url("./img/jungle.jpg");
   }
   .header__text h1 {
     font-size: 2.4rem;
@@ -406,7 +406,7 @@ body {
     width: 40%;
   }
   .hero {
-    background-image: url("/img/girl.jpg");
+    background-image: url("./img/girl.jpg");
     height: 30vh;
   }
   .footer__main {
